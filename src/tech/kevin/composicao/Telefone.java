@@ -2,7 +2,7 @@ package tech.kevin.composicao;
 
 public class Telefone {
     int DD;
-    int numero;
+    String numero;
 
     public int getDD() {
         return DD;
@@ -12,11 +12,11 @@ public class Telefone {
         this.DD = DD;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 }

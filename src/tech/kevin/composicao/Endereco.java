@@ -1,5 +1,7 @@
 package tech.kevin.composicao;
 
+import java.util.Scanner;
+
 public class Endereco {
     private String rua;
     private String numero;
@@ -7,6 +9,8 @@ public class Endereco {
     private String cidade;
     private String estado;
     private String pais;
+    private Scanner leitor = new Scanner(System.in);
+
 
     public String getRua() {
         return rua;
@@ -54,5 +58,20 @@ public class Endereco {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public void cadastrar() {
+        System.out.println("Informe o Rua: ");
+        this.rua = leitor.nextLine();
+        System.out.println("Informe o Número: ");
+        this.numero = leitor.nextLine();
+        System.out.println("Informe o CEP: ");
+        this.cep = leitor.nextLine();
+        System.out.println("Informe o Cidade: ");
+        this.cidade = leitor.nextLine();
+        System.out.println("Informe o Estado: ");
+        this.estado = leitor.nextLine();
+        System.out.println("Informe o País: ");
+        this.pais = leitor.nextLine();
     }
 }
