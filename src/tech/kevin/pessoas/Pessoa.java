@@ -1,5 +1,6 @@
 package tech.kevin.pessoas;
 
+import tech.kevin.composicao.Cargo;
 import tech.kevin.composicao.Endereco;
 import tech.kevin.composicao.Telefone;
 
@@ -10,6 +11,8 @@ public class Pessoa {
     private String dataNascimento;
     private Endereco endereco;
     private Telefone telsContato;
+
+    private Cargo cargo;
     private Scanner leitor = new Scanner(System.in);
     public void cadastrar(){
         System.out.println("Informe o nome: ");
@@ -18,8 +21,8 @@ public class Pessoa {
         this.dataNascimento = leitor.nextLine();
         this.endereco = new Endereco();
         this.endereco.cadastrar();
-
     }
+
 
     public String obterIdade(){
         return "";
