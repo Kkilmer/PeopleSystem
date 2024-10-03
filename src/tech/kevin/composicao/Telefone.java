@@ -1,22 +1,32 @@
 package tech.kevin.composicao;
 
+import java.util.Scanner;
+
 public class Telefone {
-    int DD;
-    String numero;
+    private int ddd;
+    private String numero;
+    private Scanner leitor = new Scanner(System.in);
 
-    public int getDD() {
-        return DD;
+    public int getDdd() {
+        return ddd;
     }
-
-    public void setDD(int DD) {
-        this.DD = DD;
+    public void setDdd(int ddd) {
+        this.ddd = ddd;
     }
-
     public String getNumero() {
         return numero;
     }
-
     public void setNumero(String numero) {
         this.numero = numero;
     }
+
+    public void cadastrar(){
+        System.out.println("Informe o DDD: ");
+        this.ddd = leitor.nextInt();
+        leitor.nextLine();
+        System.out.println("Informe o numero: ");
+        this.numero = leitor.nextLine();
+    }
+
+
 }

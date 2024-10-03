@@ -1,31 +1,45 @@
 package tech.kevin.pessoas;
 
-import tech.kevin.composicao.Cargo;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
 import tech.kevin.composicao.Endereco;
 import tech.kevin.composicao.Telefone;
 
-import java.util.Scanner;
-
 public class Pessoa {
     private String nome;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
     private Endereco endereco;
     private Telefone telsContato;
 
-    private Cargo cargo;
     private Scanner leitor = new Scanner(System.in);
-    public void cadastrar(){
+
+    public void cadastrar() {
         System.out.println("Informe o nome: ");
         this.nome = leitor.nextLine();
-        System.out.println("Informe a data de nascimento: ");
-        this.dataNascimento = leitor.nextLine();
+        System.out.println("Informe a data de nascimento! ");
+        System.out.println("Informe o dia: ");
+        int dia = leitor.nextInt();
+        System.out.println("Informe o mês: ");
+        int mes = leitor.nextInt();
+        System.out.println("Informe o ano: ");
+        int ano = leitor.nextInt();
+        this.dataNascimento = LocalDate.of(ano, mes, dia);
         this.endereco = new Endereco();
         this.endereco.cadastrar();
+        this.telsContato = new Telefone();
+        this.telsContato.cadastrar();
+
     }
 
+    public int obterIdade(){
+        LocalDate dataNascimento = this.dataNascimento;
+        LocalDate dataAtual = LocalDate.now();
 
-    public String obterIdade(){
-        return "";
+        Period periodo = Period.between(dataNascimento, dataAtual);
+
+        return periodo.getYears();
     }
 
     public String getNome() {
@@ -36,11 +50,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -52,11 +66,6 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public Telefone getTelsContato() {
-        return telsContato;
-    }
 
-    public void setTelsContato(Telefone telsContato) {
-        this.telsContato = telsContato;
-    }
+
 }
