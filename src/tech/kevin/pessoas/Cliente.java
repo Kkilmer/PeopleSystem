@@ -2,6 +2,7 @@ package tech.kevin.pessoas;
 
 import tech.kevin.composicao.Profissao;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Cliente extends Pessoa{
@@ -35,6 +36,32 @@ public class Cliente extends Pessoa{
         if(profissao == Profissao.OUTROS){
             System.out.println(("Informe sua profissão: "));
             this.tipoProfissaoOutros = leitor.nextLine();
+        }
+
+    }
+
+    public void atualizarInformacoes(){
+        System.out.println("Desejo atualizar as informações pessoas?");
+        String resposta = leitor.nextLine();
+        if(resposta.equalsIgnoreCase("S")){
+            System.out.println("Informe o nome atualizado: ");
+            this.setNome(leitor.nextLine());
+
+            System.out.println("Deseja atualizar a data de nascimento?");
+            resposta = leitor.nextLine();
+            if(resposta.equalsIgnoreCase("S")){
+                System.out.println("Informe o dia atualizada: ");
+                int dia = leitor.nextInt();
+                System.out.println("Informe o mês atualizada: ");
+                int mes = leitor.nextInt();
+                System.out.println("Informe o ano atualizada: ");
+                int ano = leitor.nextInt();
+                leitor.nextLine();
+                this.setDataNascimento(LocalDate.of(ano, mes, dia));
+            }
+            System.out.println("Deseja atualizar o endereço?");
+            resposta = leitor.nextLine();
+
         }
 
     }
