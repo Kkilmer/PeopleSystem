@@ -1,4 +1,4 @@
-package tech.kevin.composicao;
+package techAV1.kevin.composicao;
 
 public class Cargo {
     private double salario;

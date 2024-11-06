@@ -1,11 +1,11 @@
-package tech.kevin.pessoas;
+package techAV1.kevin.pessoas;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
 
-import tech.kevin.composicao.Endereco;
-import tech.kevin.composicao.Telefone;
+import techAV1.kevin.composicao.Endereco;
+import techAV1.kevin.composicao.Telefone;
 
 public class Pessoa {
     private String nome;

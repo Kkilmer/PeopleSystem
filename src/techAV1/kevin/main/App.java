@@ -1,8 +1,6 @@
-package tech.kevin.main;
+package techAV1.kevin.main;
 
-import tech.kevin.composicao.Telefone;
-import tech.kevin.pessoas.Pessoa;
-import tech.kevin.pessoas.Cliente;
+import techAV1.kevin.pessoas.Cliente;
 
 import java.util.Scanner;
 

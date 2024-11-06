@@ -1,4 +1,4 @@
-package tech.kevin.composicao;
+package tech2.sala.composicao;
 
 public enum Profissao {
     PROFESSOR,
@@ -8,4 +8,5 @@ public enum Profissao {
     DESENVOLVEDOR,
     QA,
     OUTROS;
+
 }

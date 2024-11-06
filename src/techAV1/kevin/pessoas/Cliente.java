@@ -1,6 +1,6 @@
-package tech.kevin.pessoas;
+package techAV1.kevin.pessoas;
 
-import tech.kevin.composicao.Profissao;
+import techAV1.kevin.composicao.Profissao;
 
 import java.util.Scanner;
 
@@ -39,6 +39,7 @@ public class Cliente extends Pessoa{
 
     }
 
+    @Override
     public String toString() {
         return "Cliente{" +
                 "codigo='" + codigo + '\'' +

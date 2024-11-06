@@ -1,6 +1,4 @@
-package tech.kevin.composicao;
-
-import java.util.Scanner;
+package kevin.house.atv1.composicao;
 
 import java.util.Scanner;
 

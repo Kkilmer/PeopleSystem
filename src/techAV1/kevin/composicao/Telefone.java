@@ -1,4 +1,4 @@
-package tech.kevin.composicao;
+package techAV1.kevin.composicao;
 
 import java.util.Scanner;
 
