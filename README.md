@@ -59,20 +59,20 @@ Contém a classe `Main.java`, ponto de entrada do sistema, responsável por inst
 
 ## 💡 Exemplo de Composição 
 
-`java
+```java
 Endereco endereco = new Endereco("Rua Central", 100, "Centro", "Recife", "PE");
 Telefone telefone = new Telefone(81, "99999-1234");
 Profissao profissao = new Profissao("Engenheiro Civil");`
 
-`Cliente cliente = new Cliente("João da Silva", "123.456.789-00", endereco, telefone, profissao);`
+Cliente cliente = new Cliente("João da Silva", "123.456.789-00", endereco, telefone, profissao);
 
-`| Conceito       | Aplicação                                                                    |
+| Conceito       | Aplicação                                                                    |
 | -------------- | ---------------------------------------------------------------------------- |
 | Encapsulamento | Todos os atributos são `private` e acessados via `getters/setters`.          |
 | Abstração      | As classes modelam entidades do mundo real com seus próprios comportamentos. |
 | Composição     | Classes complexas formadas por objetos de outras classes.                    |
-| Reutilização   | Componentes como `Endereco` e `Telefone` podem ser usados em várias classes. |`
-
+| Reutilização   | Componentes como `Endereco` e `Telefone` podem ser usados em várias classes. |
+```
 ---
 
 ## 🛠️ Requisitos
